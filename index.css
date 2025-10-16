@@ -125,9 +125,9 @@ p {
 }
 
 button {
-    background: rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.05);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.08);
     padding: 14px 28px;
     border-radius: 12px;
     cursor: pointer;
@@ -135,8 +135,9 @@ button {
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     font-weight: 600;
-    color: rgba(255,255,255,0.9);
+    color: rgba(255,255,255,0.6);
     font-family: 'Inter', sans-serif;
+    opacity: 0.7;
 }
 
 button:hover {
@@ -144,6 +145,8 @@ button:hover {
     border-color: rgba(255,255,255,0.2);
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    opacity: 1;
+    color: rgba(255,255,255,0.9);
 }
 
 button:active {
