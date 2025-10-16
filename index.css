@@ -776,10 +776,28 @@ strong {
     .slide .glass-box[style*="height: 100%"],
     .slide .glass-box[style*="height:100%"] {
         height: auto !important;
+        min-height: auto !important;
+    }
+
+    /* Remove flex: 1 that causes elements to expand on mobile */
+    .slide div[style*="flex: 1"],
+    .slide div[style*="flex:1"] {
+        flex: none !important;
+        width: 100% !important;
     }
 
     /* Ensure proper spacing between stacked sections */
-    .slide div[style*="margin-top"] {
+    .slide > div[style*="margin-top"],
+    .slide > div > div[style*="margin-top"] {
         margin-top: 24px !important;
+    }
+
+    /* Add clear separation for nested flex containers */
+    .slide div[style*="display: flex"] > div {
+        margin-bottom: 16px;
+    }
+
+    .slide div[style*="display: flex"] > div:last-child {
+        margin-bottom: 0;
     }
 }
