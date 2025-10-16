@@ -509,10 +509,23 @@ li {
     padding: 24px;
 }
 
-/* Fix slide 9 glass-box height issue on desktop */
+/* Fix slide 9 glass-box to prevent overlap on desktop */
+.slide div[style*="display: flex; gap: 24px"] {
+    align-items: flex-start;
+}
+
+.slide div[style*="display: flex"] > div[style*="flex: 1"] {
+    align-self: flex-start;
+}
+
 .slide div[style*="display: flex"] > div[style*="flex: 1"] .glass-box[style*="height: 100%"] {
     height: auto !important;
-    min-height: 100%;
+    padding-bottom: 16px !important;
+}
+
+.slide div[style*="display: flex; gap: 24px"] + div[style*="margin-top"] {
+    clear: both;
+    margin-top: 40px !important;
 }
 
 strong {
