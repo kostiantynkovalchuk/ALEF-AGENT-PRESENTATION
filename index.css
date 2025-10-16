@@ -59,7 +59,7 @@ body {
 
 .slide-number {
     position: absolute;
-    bottom: 60px;
+    bottom: 30px;
     right: 120px;
     color: rgba(255,255,255,0.3);
     font-size: 14px;
@@ -116,7 +116,7 @@ p {
 
 .controls {
     position: fixed;
-    bottom: 60px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
