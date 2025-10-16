@@ -752,4 +752,22 @@ strong {
         font-size: 13px;
         margin-bottom: 8px;
     }
+
+    /* Override inline grid styles on slides 7, 8, 9, 12 */
+    .slide div[style*="display: grid"],
+    .slide div[style*="display:grid"] {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+    }
+
+    .slide div[style*="grid-template-columns"] {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* Stack any flex containers with display:flex inline styles */
+    .slide div[style*="display: flex"][style*="gap:"] {
+        flex-direction: column !important;
+    }
 }
