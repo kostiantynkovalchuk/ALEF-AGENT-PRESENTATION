@@ -509,6 +509,12 @@ li {
     padding: 24px;
 }
 
+/* Fix slide 9 glass-box height issue on desktop */
+.slide div[style*="display: flex"] > div[style*="flex: 1"] .glass-box[style*="height: 100%"] {
+    height: auto !important;
+    min-height: 100%;
+}
+
 strong {
     color: #00D9FF;
     font-weight: 600;
@@ -836,5 +842,30 @@ strong {
 
     .slide div[style*="display: flex"] > div:last-child {
         margin-bottom: 0;
+    }
+
+    /* Specific fix for slide 9 - target parent container */
+    .slide div[style*="display: flex; gap: 24px"],
+    .slide div[style*="display: flex;gap: 24px"],
+    .slide div[style*="display:flex; gap: 24px"],
+    .slide div[style*="display:flex;gap: 24px"] {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    /* Force all child divs inside flex containers to not expand */
+    .slide div[style*="display: flex"] > div[style*="flex: 1"],
+    .slide div[style*="display: flex"] > div[style*="flex:1"] {
+        flex: none !important;
+        width: 100% !important;
+        max-height: none !important;
+    }
+
+    /* Override any height constraints on nested elements */
+    .slide div[style*="flex: 1"] .glass-box,
+    .slide div[style*="flex:1"] .glass-box {
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
     }
 }
