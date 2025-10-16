@@ -767,7 +767,19 @@ strong {
     }
 
     /* Stack any flex containers with display:flex inline styles */
-    .slide div[style*="display: flex"][style*="gap:"] {
+    .slide div[style*="display: flex"][style*="gap:"],
+    .slide div[style*="display:flex"][style*="gap:"] {
         flex-direction: column !important;
+    }
+
+    /* Fix height: 100% causing overlap issues on slide 9 */
+    .slide .glass-box[style*="height: 100%"],
+    .slide .glass-box[style*="height:100%"] {
+        height: auto !important;
+    }
+
+    /* Ensure proper spacing between stacked sections */
+    .slide div[style*="margin-top"] {
+        margin-top: 24px !important;
     }
 }
