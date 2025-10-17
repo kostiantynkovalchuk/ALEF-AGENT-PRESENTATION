@@ -25,7 +25,7 @@ body {
     background: linear-gradient(135deg, #1A1F3A 0%, #0F1229 100%);
     border-radius: 0;
     box-shadow: none;
-    padding: 80px 120px;
+    padding: 60px 120px 80px 120px;
     display: none;
     position: relative;
     overflow: hidden;
@@ -59,7 +59,7 @@ body {
 
 .slide-number {
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
     right: 120px;
     color: rgba(255,255,255,0.3);
     font-size: 14px;
@@ -116,7 +116,7 @@ p {
 
 .controls {
     position: fixed;
-    bottom: 30px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -535,39 +535,53 @@ strong {
 
 /* Slide 12 specific adjustments to fit content above nav buttons */
 .slide:last-of-type h2 {
-    font-size: 36px;
-    margin-bottom: 16px;
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.slide:last-of-type > p {
+    margin-bottom: 20px !important;
 }
 
 .slide:last-of-type .metrics-grid {
-    margin-top: 20px;
+    margin-top: 16px;
     gap: 12px;
 }
 
 .slide:last-of-type .metric-card {
-    padding: 20px;
+    padding: 16px;
 }
 
 .slide:last-of-type .metric-value {
-    font-size: 36px;
+    font-size: 32px;
 }
 
 .slide:last-of-type p {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
+    font-size: 13px;
 }
 
 .slide:last-of-type > div[style*="margin-top: 32px"] {
-    margin-top: 20px !important;
+    margin-top: 16px !important;
 }
 
 .slide:last-of-type div[style*="padding: 28px"] {
-    padding: 20px !important;
+    padding: 16px !important;
+}
+
+.slide:last-of-type h4 {
+    font-size: 14px !important;
+    margin-bottom: 10px !important;
 }
 
 .slide:last-of-type .highlight {
-    margin-top: 20px !important;
-    padding: 16px !important;
-    margin-bottom: 80px;
+    margin-top: 16px !important;
+    padding: 12px !important;
+    margin-bottom: 100px;
+}
+
+.slide:last-of-type .highlight p {
+    font-size: 13px !important;
 }
 
 /* Mobile Responsive Styles */
